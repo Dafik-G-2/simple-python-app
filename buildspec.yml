@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+  pre-build:
+    commands:
+      - echo "pre-build stage started"
+      - echo "installing dependencies"
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "build stage started..."
+      - cd /simple-python-app
+  post-build:
+    commands:
+      - echo "Build completed successfully"
+
+# artifacts:
